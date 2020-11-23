@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/charly/.config/rofi'
+let g:netrw_dirhist_5='/home/charly/.config/picom'
+let g:netrw_dirhist_4='/home/charly/.config/spotify'
+let g:netrw_dirhist_3='/home/charly/.config/spicetify'
+let g:netrw_dirhist_2='/home/charly/Documents/Recherche_SDP/Experiment/Cholesky/matpower'
+let g:netrw_dirhist_1='/home/charly/Documents/Cours/DataS_Algo/Problem/ADSA_Problem/Step1'
+let g:netrw_dirhist_0='/home/charly/.config/gtk-3.0'
+let g:netrw_dirhist_9='/home/charly/.config/sxhkd'
+let g:netrw_dirhist_8='/home/charly/Documents/Recherche_SDP/Experiment/Generation/SDP_solve.jl/Mosek_runs/WB5_SP5_CMAX'
+let g:netrw_dirhist_7='/home/charly/Documents/Recherche_SDP/Experiment/Generation/SDP_solve.jl'
