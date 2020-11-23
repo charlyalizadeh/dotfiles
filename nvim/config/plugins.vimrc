@@ -31,12 +31,11 @@ let g:oceanic_material_allow_reverse=1
 
 "=================================================================================
 "                               PLUGIN: vim-slime
-"
+
 let g:slime_target = "neovim"
 
-
 "=================================================================================
-"                               PLUGIN: vim-slime
+"                               PLUGIN: vim-cpp-enhanced-highlight
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1

@@ -28,7 +28,6 @@ Plug 'vim-airline/vim-airline-themes'
 "Bufferline
 Plug 'bling/vim-bufferline'
 
-
 "Auto completion with deep learning 
 Plug 'zxqfl/tabnine-vim'
 
