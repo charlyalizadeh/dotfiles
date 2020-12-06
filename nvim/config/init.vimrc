@@ -1,4 +1,4 @@
-"██╗   ██╗██╗███╗   ███╗      ██████╗ ██╗     ██╗   ██╗ ██████╗ 
+"██╗   ██╗██╗███╗   ███╗      ██████╗ ██╗     ██╗   ██╗ ██████╗
 "██║   ██║██║████╗ ████║      ██╔══██╗██║     ██║   ██║██╔════╝ 
 "██║   ██║██║██╔████╔██║█████╗██████╔╝██║     ██║   ██║██║  ███╗
 "╚██╗ ██╔╝██║██║╚██╔╝██║╚════╝██╔═══╝ ██║     ██║   ██║██║   ██║
@@ -18,8 +18,8 @@ Plug 'cocopon/iceberg.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
 Plug 'ghifarit53/tokyonight-vim' 
-Plug 'ryuta69/elly.vim' 
-Plug 'chriskempson/base16-vim' " <-
+Plug 'ryuta69/elly.vim'
+Plug 'chriskempson/base16-vim'  
 
 "Status and Tab line and themes for it
 Plug 'vim-airline/vim-airline' 
@@ -63,9 +63,6 @@ Plug 'JuliaEditorSupport/julia-vim'
 "To work with all REPL 
 Plug 'jpalardy/vim-slime'
 
-"Highlight
-Plug 'sheerun/vim-polyglot'
-
 "Markdown
 Plug 'plasticboy/vim-markdown'
 
@@ -74,5 +71,9 @@ Plug 'junegunn/goyo.vim'
 
 "pudb for python debug
 Plug 'SkyLeach/pudb.vim'
+
+"fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()

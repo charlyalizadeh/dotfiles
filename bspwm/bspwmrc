@@ -6,7 +6,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 bspc monitor DP-1 -d 1 2 3 4 5
 bspc monitor HDMI-1 -d 6 7 8 9 0
 
-
 bspc config border_width         2
 bspc config window_gap          12
 
@@ -19,7 +18,14 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a matplotlib state=floating
+bspc rule -a Emacs state=tiled manage=on layer=normal follow=off
+bspc rule -a R_x11 state=floating
+
+bspc config pointer_follows_monitor true
+bspc config pointer_follows_focus true
 
 feh --bg-scale ~/Pictures/wallpaper/wallpaper1.png
 
 ~/.config/polybar/launch.sh
+

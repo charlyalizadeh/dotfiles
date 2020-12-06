@@ -17,7 +17,6 @@ autocmd filetype julia set foldmethod=indent
 autocmd filetype tex set foldmethod=expr | :set foldexpr=vimtex#fold#level(v:lnum) | :set foldtext=vimtex#fold#text() | :set fillchars=fold:\
 autocmd filetype CHADTree set nofoldenable
 
-
 "Colorscheme setup
 syntax on
 set termguicolors
@@ -25,6 +24,7 @@ let base16colorspace=256
 set background=dark
 set t_Co=16
 colorscheme elly
+se cursorline
 
 "Basic setup
 set nu
@@ -44,6 +44,5 @@ autocmd BufRead,BufNewFile *.jl :set filetype=julia
 "Allow moving between buffer without saving
 set hidden
 
-"Indent line
-set listchars=tab:\|\
-set list
+"Highlight search and replace
+set inccommand=nosplit
