@@ -20,6 +20,7 @@ Plug 'morhetz/gruvbox'
 Plug 'ghifarit53/tokyonight-vim' 
 Plug 'ryuta69/elly.vim'
 Plug 'chriskempson/base16-vim'  
+Plug 'hzchirs/vim-material'
 
 "Status and Tab line and themes for it
 Plug 'vim-airline/vim-airline' 
@@ -75,5 +76,14 @@ Plug 'SkyLeach/pudb.vim'
 "fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+"repeat.vim
+Plug 'tpope/vim-repeat'
+
+"treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+"Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()

@@ -25,22 +25,22 @@ nnoremap <leader>wl <C-W><C-L>
 nnoremap <leader>wh <C-W><C-H>
 
 "Split
-nnoremap <leader>ws :split <cr>
-nnoremap <leader>wv :vsplit <cr>
+nnoremap <leader>ws :split <CR>
+nnoremap <leader>wv :vsplit <CR>
 
 "Close
-nnoremap <leader>wc :q <cr>
+nnoremap <leader>wc :q <CR>
 
 "Open terminal
 
-nnoremap <leader>ot :set splitbelow <cr> :split <cr> :resize 15 <cr> :terminal <cr> :start <cr>
+nnoremap <leader>ot :set splitbelow <CR> :split <CR> :terminal <CR> :resize 15 <CR> :start <CR>
 "Quit terminal input
-tnoremap <leader><Esc> <C-\><C-N>
+tnoremap ,<Esc> <C-\><C-N>
 
 "Resize all terminal
 nnoremap <leader>w= <C-W>=
 "Maximize window
-nnoremap <leader>wo :call MaximizeWindowSize() <cr>
+nnoremap <leader>wo :call MaximizeWindowSize() <CR>
 
 
 "                            =======================                              
@@ -60,10 +60,10 @@ nnoremap <leader>ç :b9 <CR>
 nnoremap <leader>à :b0 <CR>
 
 "Close (and save if `&modifiable` is set) all buffer
-nnoremap <leader>ww :call SaveAndCloseAllTabBuffer() <cr>
+nnoremap <leader>ww :call SaveAndCloseAllTabBuffer() <CR>
 
-"Kill buffer
-nnoremap <leader>bk :call KillBuffer() <cr>
+"Kill buffer TODO: Correct bug in this function
+nnoremap <leader>bk :call KillBuffer() <CR>
 
 
 "                            =======================                              
@@ -100,8 +100,14 @@ noremap <F2> :syntax sync fromstart <CR>
 nnoremap <F3> :colorscheme elly <CR>
 
 "Insert equation environment in LaTeX
-autocmd filetype tex inoremap <buffer>,e \[\]<left><left><cr><cr><up><Esc>cc
+autocmd filetype tex inoremap <buffer>,e \[\]<left><left><CR><CR><up><Esc>cc
 autocmd filetype tex inoremap <buffer>,i  \(\)<left><left>
+
+"Save and source ~/.config/nvim/config/init.vim and run :PlugInstall
+autocmd filetype vim nnoremap <buffer><Leader>ss :w<bar>:source %<CR> :PlugInstall <CR>
+"Clean uninstalled plugin
+autocmd filetype vim nnoremap <buffer><Leader>sc :w<bar>:source %<CR> :PlugClean <CR>
+
 
 
 "                            =======================                              
@@ -121,8 +127,8 @@ autocmd filetype rmarkdown nnoremap <buffer> <F5> :set splitright <bar> :vsplit 
 "OTHER
 "C#
 autocmd filetype cs nnoremap <f5> :w <bar> :!mcs % <CR> :set splitright <bar> :vsplit <bar> :terminal ./'%:r.exe' <CR>
-"Javascript
-autocmd filetype javascript nnoremap <buffer> <f5> :w  <bar> :!firefox ./index.html <CR>
+"JavasCRipt
+autocmd filetype javasCRipt nnoremap <buffer> <f5> :w  <bar> :!firefox ./index.html <CR>
 "C++
 autocmd filetype cpp nnoremap <buffer> <f5> :w <bar> :packadd termdebug <bar> :Termdebug a.out <CR>
 "HTML
@@ -151,5 +157,5 @@ nmap <silent><Leader>g :Goyo<CR>
 autocmd filetype r,rmarkdown inoremap <buffer> <_> _
 
 "fzf
-nnoremap <silent> <Leader>. :Files %:p:h<cr>
-nnoremap <silent> <Leader>bb :Buffers <cr>
+nnoremap <silent> <Leader>. :Files %:p:h<CR>
+nnoremap <silent> <Leader>bb :Buffers <CR>

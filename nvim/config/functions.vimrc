@@ -78,6 +78,6 @@ function KillBuffer()
     let filename = expand("%")
     let choice = confirm("Are you sure you want to kill " . filename . "?", "&Yes\n&No")
     if choice == 1
-        execute ":bd!"
+        execute ":bw!"
     endif
 endfunction

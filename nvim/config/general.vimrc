@@ -9,7 +9,8 @@
 let g:termdebug_wide=1
 
 "Default folding method
-set foldmethod=syntax
+set foldmethod=indent
+"set foldexpr=nvim_treesitter#foldexpr()
 
 "General folding options
 autocmd filetype python set foldmethod=indent 
@@ -20,14 +21,13 @@ autocmd filetype CHADTree set nofoldenable
 "Colorscheme setup
 syntax on
 set termguicolors
-let base16colorspace=256
-set background=dark
+"let base16colorspace=256
 set t_Co=16
 colorscheme elly
 se cursorline
 
 "Basic setup
-set nu
+set rnu
 set noerrorbells
 set tabstop=4 softtabstop=4 shiftwidth=4
 set expandtab
@@ -37,6 +37,9 @@ set noswapfile
 set incsearch
 set undodir=~/.config/.nvim/undodir
 set undofile
+
+
+autocmd filetype tex set wrap
 
 "Set .jl filetype as julia file
 autocmd BufRead,BufNewFile *.jl :set filetype=julia

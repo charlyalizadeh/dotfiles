@@ -15,7 +15,7 @@ let g:tex_flavor = 'latex'
 "=================================================================================
 "                               PLUGIN: vim-airline
 "=================================================================================
-let g:airline_theme='elly'
+let g:airline_theme = 'material'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -32,6 +32,11 @@ let g:oceanic_material_allow_reverse=1
 
 
 "=================================================================================
+"                               PLUGIN: oceanic-material
+"=================================================================================
+let g:material_style='oceanic'
+
+"=================================================================================
 "                               PLUGIN: vim-slime
 "=================================================================================
 let g:slime_target = "neovim"
@@ -46,3 +51,7 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
+
+"=================================================================================
+"                               PLUGIN: treesitter
+"=================================================================================
