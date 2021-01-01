@@ -32,8 +32,12 @@ cp $HOME/.config/kitty/* ./kitty/
 # rofi
 cp $HOME/.config/rofi/* ./rofi/
 
+# zathura
+cp $HOME/.config/zathura/* ./zathura/
+
 # GTK 3
 cp $HOME/.config/gtk-3.0/* ./gtk-3.0/
 
 # Wallpaper
 cp -r $HOME/Pictures/wallpaper/* ./wallpaper
+
