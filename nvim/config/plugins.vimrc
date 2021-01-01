@@ -15,7 +15,7 @@ let g:tex_flavor = 'latex'
 "=================================================================================
 "                               PLUGIN: vim-airline
 "=================================================================================
-let g:airline_theme = 'material'
+let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -51,6 +51,14 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
+
+
+"=================================================================================
+"                               PLUGIN: ALE
+"=================================================================================
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 "=================================================================================
 "                               PLUGIN: treesitter

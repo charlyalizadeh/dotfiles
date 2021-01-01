@@ -19,59 +19,48 @@
 ! #define base0E #ba8baf
 ! #define base0F #a16946
 
-! elly theme from: https://github.com/ulwlu/elly.vim
-#define base00 #111a1f
-#define base01 #797E80
-#define base02 #8D7856
-#define base03 #738C9C
-#define base04 #738C9C
-#define base05 #8D7856
-#define base06 #810002
-#define base07 #798362
-#define base08 #8D7856
-#define base09 #9B9257
-#define base0A #8D7856
-#define base0B #6998B3
-#define base0C #9B9257
-#define base0D #3E4B59
-#define base0E #2D3640
-#define base0F #c0c7ca
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
 
-*foreground:   base0F
-#ifdef background_opacity
-*background:   [background_opacity]base00
-#else
-*background:   base00
-#endif
-*cursorColor:  base0F
-
-*color0:       base00
-*color1:       base08
-*color2:       base0B
-*color3:       base0A
-*color4:       base0D
-*color5:       base0E
-*color6:       base0C
-*color7:       base05
-
-*color8:       base03
-*color9:       base08
-*color10:      base0B
-*color11:      base0A
-*color12:      base0D
-*color13:      base0E
-*color14:      base0C
-*color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*color16:      base09
-*color17:      base0F
-*color18:      base01
-*color19:      base02
-*color20:      base04
-*color21:      base06
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
 XTerm.vt100.faceName: Tamzen:size=14:antialias=false
 XTerm.vt100.font: 7x13
 XTerm*ptyInitialErase: true
+
+XTerm*ttyModes:         erase ^?
+XTerm*VT100.Translations: \
+        #override <Key>BackSpace: string(0x7f) \n\
+    <Key>Delete:    string(0x1b) string("[3~")

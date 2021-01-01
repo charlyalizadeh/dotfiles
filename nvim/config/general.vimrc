@@ -18,13 +18,18 @@ autocmd filetype julia set foldmethod=indent
 autocmd filetype tex set foldmethod=expr | :set foldexpr=vimtex#fold#level(v:lnum) | :set foldtext=vimtex#fold#text() | :set fillchars=fold:\
 autocmd filetype CHADTree set nofoldenable
 
+
 "Colorscheme setup
 syntax on
 set termguicolors
 "let base16colorspace=256
 set t_Co=16
-colorscheme elly
+colorscheme gruvbox
 se cursorline
+
+"Color 80 character limits
+hi ColorColumn ctermbg=lightgrey guibg=#252525
+set colorcolumn=80
 
 "Basic setup
 set rnu
