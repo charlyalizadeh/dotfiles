@@ -29,7 +29,7 @@ se cursorline
 
 "Color 80 character limits
 hi ColorColumn ctermbg=lightgrey guibg=#252525
-set colorcolumn=80
+set colorcolumn=120
 
 "Basic setup
 set rnu

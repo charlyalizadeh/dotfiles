@@ -108,8 +108,8 @@ autocmd filetype vim nnoremap <buffer><Leader>ss :w<bar>:source %<CR> :PlugInsta
 "Clean uninstalled plugin
 autocmd filetype vim nnoremap <buffer><Leader>sc :w<bar>:source %<CR> :PlugClean <CR>
 
-"Toggle 80 column color
-nnoremap <expr> <Leader>l &colorcolumn==0 ? ':set colorcolumn=80<CR>':':set colorcolumn=0<CR>'
+"Toggle 120 column color
+nnoremap <expr> <Leader>l &colorcolumn==0 ? ':set colorcolumn=120<CR>':':set colorcolumn=0<CR>'
 
 
 
