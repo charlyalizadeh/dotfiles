@@ -11,7 +11,7 @@
 "=================================================================================
 
 "Leader key
-let mapleader = " "
+let mapleader=" "
 
 
 "                            =======================                              
@@ -102,6 +102,11 @@ nnoremap <F3> :colorscheme elly <CR>
 "Insert equation environment in LaTeX
 autocmd filetype tex inoremap <buffer>,e \[\]<left><left><CR><CR><up><Esc>cc
 autocmd filetype tex inoremap <buffer>,i  \(\)<left><left>
+autocmd filetype tex nnoremap <buffer>j  gj
+autocmd filetype tex nnoremap <buffer>k  gk
+
+"Insert code block in markdown
+autocmd filetype pandoc inoremap <buffer>,c ```<CR>```<UP><Esc>o
 
 "Save and source ~/.config/nvim/config/init.vim and run :PlugInstall
 autocmd filetype vim nnoremap <buffer><Leader>ss :w<bar>:source %<CR> :PlugInstall <CR>
@@ -126,6 +131,8 @@ autocmd filetype julia nnoremap <buffer> <F5> :set splitright <bar> :vsplit <bar
 "R
 autocmd filetype r nnoremap <buffer> <F5> :set splitright <bar> :vsplit <bar> :terminal R <CR>
 autocmd filetype rmarkdown nnoremap <buffer> <F5> :set splitright <bar> :vsplit <bar> :terminal R <CR>
+"MySQL
+autocmd filetype sql nnoremap <buffer> <F5> :set splitright <bar> :vsplit <bar> :terminal mysql --user=root -p<CR>
 
 "OTHER
 "C#
@@ -143,8 +150,8 @@ autocmd filetype html nnoremap <buffer> <f5> :w <bar> :!firefox % <CR>
 "=================================================================================
 
 "CHADTree
-nnoremap <Leader><Tab> <cmd>w <bar> :CHADopen<CR>
-autocmd filetype CHADTree nnoremap <buffer> <Leader><Tab> :q <CR>
+nnoremap <Leader>c <cmd>w <bar> :CHADopen<CR>
+autocmd filetype CHADTree nnoremap <buffer> <Leader>c :q <CR>
 
 "Nvim-R
 nmap <silent><Leader>b <Plug>RSendChunk<CR>
@@ -160,5 +167,7 @@ nmap <silent><Leader>g :Goyo<CR>
 autocmd filetype r,rmarkdown inoremap <buffer> <_> _
 
 "fzf
-nnoremap <silent> <Leader>. :Files %:p:h<CR>
-nnoremap <silent> <Leader>bb :Buffers <CR>
+nnoremap <silent> <Leader><Tab>. :Files %:p:h<CR>
+nnoremap <silent> <Leader><Tab>b :Buffers <CR>
+nnoremap <silent> <Leader><Tab>/ :Files ~/<CR>
+nnoremap <silent> <Leader><Tab><Tab> :GFiles<CR>

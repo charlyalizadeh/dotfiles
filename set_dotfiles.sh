@@ -17,6 +17,9 @@ cp $HOME/.xinitrc ./
 # Xressources
 cp $HOME/.Xresources ./
 
+# fish
+cp -r $HOME/.config/fish/* ./fish/
+
 # Neovim
 cp -r $HOME/.config/nvim/config/* ./nvim/config/
 cp $HOME/.config/nvim/init.vim ./nvim/

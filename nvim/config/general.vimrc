@@ -42,7 +42,7 @@ set noswapfile
 set incsearch
 set undodir=~/.config/.nvim/undodir
 set undofile
-
+set scrolloff=1
 
 autocmd filetype tex set wrap
 
