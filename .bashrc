@@ -142,5 +142,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 set -o vi
+
+. ~/.fancy-git/prompt.sh
+source "$HOME/.cargo/env"
+exec fish
