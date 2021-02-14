@@ -13,7 +13,6 @@
 "Leader key
 let mapleader=" "
 
-
 "                            =======================                              
 "                                   Tab/Window
 "                            =======================                              
@@ -64,6 +63,21 @@ nnoremap <leader>ww :call SaveAndCloseAllTabBuffer() <CR>
 
 "Kill buffer TODO: Correct bug in this function
 nnoremap <leader>bk :call KillBuffer() <CR>
+
+"                            =======================                              
+"                                     Tabs
+"                            =======================                              
+
+nnoremap <leader>t& 1gt
+nnoremap <leader>té 2gt
+nnoremap <leader>t" 3gt
+nnoremap <leader>t' 4gt
+nnoremap <leader>t( 5gt
+nnoremap <leader>t- 6gt
+nnoremap <leader>tè 7gt
+nnoremap <leader>t_ 8gt
+nnoremap <leader>tç 9gt
+nnoremap <leader>tà 0gt
 
 
 "                            =======================                              
@@ -158,7 +172,7 @@ nmap <silent><Leader>b <Plug>RSendChunk<CR>
 vmap <silent><Leader>b <Plug>RSendChunk<CR>
 
 "vim-slime
-autocmd filetype python,julia,r nmap <C-i> RSlimeSendCurrentLine <CR>
+"autocmd filetype python,julia,r nmap <C-i> RSlimeSendCurrentLine <CR>
 
 "Goyo
 nmap <silent><Leader>g :Goyo<CR>
@@ -167,7 +181,7 @@ nmap <silent><Leader>g :Goyo<CR>
 autocmd filetype r,rmarkdown inoremap <buffer> <_> _
 
 "fzf
-nnoremap <silent> <Leader><Tab>. :Files %:p:h<CR>
-nnoremap <silent> <Leader><Tab>b :Buffers <CR>
-nnoremap <silent> <Leader><Tab>/ :Files ~/<CR>
-nnoremap <silent> <Leader><Tab><Tab> :GFiles<CR>
+nnoremap <silent> <Leader>f. :Files %:p:h<CR>
+nnoremap <silent> <Leader>fb :Buffers <CR>
+nnoremap <silent> <Leader>f/ :Files ~/<CR>
+nnoremap <silent> <Leader>f<Tab> :GFiles<CR>

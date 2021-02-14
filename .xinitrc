@@ -68,3 +68,4 @@ sxhkd &
 exec bspwm
 playerctld daemon
 
+xset r rate 660 25

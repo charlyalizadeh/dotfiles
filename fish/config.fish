@@ -27,3 +27,5 @@ function fish_mode_prompt
   end
   set_color normal
 end
+
+alias vi="nvim"

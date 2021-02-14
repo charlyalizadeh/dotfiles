@@ -26,9 +26,6 @@ Plug 'hzchirs/vim-material'
 Plug 'vim-airline/vim-airline' 
 Plug 'vim-airline/vim-airline-themes'
 
-"Bufferline
-Plug 'bling/vim-bufferline'
-
 "Auto completion with deep learning 
 Plug 'zxqfl/tabnine-vim'
 
@@ -85,5 +82,8 @@ Plug 'tpope/vim-repeat'
 
 "Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+"Tortose-typing
+Plug 'thanthese/Tortoise-Typing'
 
 call plug#end()
