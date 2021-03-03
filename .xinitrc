@@ -64,8 +64,9 @@ get_session(){
 }
 
 export DOOMDIR=$HOME/.config/doom
+
 sxhkd &
 exec bspwm
 playerctld daemon
-
+date $(date +%m%d%H%M%Y.%S -d '1 hour ago')
 xset r rate 660 25
