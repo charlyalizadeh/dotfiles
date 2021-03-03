@@ -21,6 +21,7 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'ryuta69/elly.vim'
 Plug 'chriskempson/base16-vim'  
 Plug 'hzchirs/vim-material'
+Plug 'Luxed/ayu-vim'
 
 "Status and Tab line and themes for it
 Plug 'vim-airline/vim-airline' 
@@ -43,9 +44,6 @@ Plug 'tpope/vim-surround'
 
 "For editing and compiling Tex file
 Plug 'lervag/vimtex'
-
-"A file in NeoVim
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 
 "For editing and compiling Rmarkdown files
 Plug 'vim-pandoc/vim-rmarkdown'
@@ -83,7 +81,16 @@ Plug 'tpope/vim-repeat'
 "Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-"Tortose-typing
-Plug 'thanthese/Tortoise-Typing'
+"vimwiki
+Plug 'vimwiki/vimwiki'
+
+"pear-tree
+Plug 'tmsvg/pear-tree'
+
+"focus.vim
+Plug 'beauwilliams/focus.nvim'
+
+"neo4j syntax
+Plug 'neo4j-contrib/cypher-vim-syntax'
 
 call plug#end()

@@ -18,6 +18,9 @@ autocmd filetype julia set foldmethod=indent
 autocmd filetype tex set foldmethod=expr | :set foldexpr=vimtex#fold#level(v:lnum) | :set foldtext=vimtex#fold#text() | :set fillchars=fold:\
 autocmd filetype CHADTree set nofoldenable
 
+"Vimwiki requirements
+set nocompatible
+filetype plugin on
 
 "Colorscheme setup
 syntax on

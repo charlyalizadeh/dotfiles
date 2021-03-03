@@ -23,16 +23,18 @@ nnoremap <leader>wk <C-W><C-K>
 nnoremap <leader>wl <C-W><C-L>
 nnoremap <leader>wh <C-W><C-H>
 
-"Split
-nnoremap <leader>ws :split <CR>
-nnoremap <leader>wv :vsplit <CR>
+"plit
+nnoremap <leader>sj :set sb <bar> :split <CR>
+nnoremap <leader>sk :set nosb <bar> :split <CR>
+nnoremap <leader>sh :set nospr <bar> :vsplit <CR>
+nnoremap <leader>sl :set spr <bar> :vsplit <CR>
 
 "Close
-nnoremap <leader>wc :q <CR>
+nnoremap <leader>sc :q <CR>
 
 "Open terminal
 
-nnoremap <leader>ot :set splitbelow <CR> :split <CR> :terminal <CR> :resize 15 <CR> :start <CR>
+nnoremap <leader>st :set splitbelow <CR> :split <CR> :terminal <CR> :resize 15 <CR> :start <CR>
 "Quit terminal input
 tnoremap ,<Esc> <C-\><C-N>
 
@@ -59,7 +61,7 @@ nnoremap <leader>ç :b9 <CR>
 nnoremap <leader>à :b0 <CR>
 
 "Close (and save if `&modifiable` is set) all buffer
-nnoremap <leader>ww :call SaveAndCloseAllTabBuffer() <CR>
+"nnoremap <leader>ww :call SaveAndCloseAllTabBuffer() <CR>
 
 "Kill buffer TODO: Correct bug in this function
 nnoremap <leader>bk :call KillBuffer() <CR>
@@ -91,12 +93,9 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 "Auto closed 
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
 "Reset highlight
 nnoremap <Leader><Leader> :noh<CR>
 
@@ -123,13 +122,16 @@ autocmd filetype tex nnoremap <buffer>k  gk
 autocmd filetype pandoc inoremap <buffer>,c ```<CR>```<UP><Esc>o
 
 "Save and source ~/.config/nvim/config/init.vim and run :PlugInstall
-autocmd filetype vim nnoremap <buffer><Leader>ss :w<bar>:source %<CR> :PlugInstall <CR>
+"autocmd filetype vim nnoremap <buffer><Leader>ss :w<bar>:source %<CR> :PlugInstall <CR>
 "Clean uninstalled plugin
-autocmd filetype vim nnoremap <buffer><Leader>sc :w<bar>:source %<CR> :PlugClean <CR>
+"autocmd filetype vim nnoremap <buffer><Leader>sc :w<bar>:source %<CR> :PlugClean <CR>
 
 "Toggle 120 column color
 nnoremap <expr> <Leader>l &colorcolumn==0 ? ':set colorcolumn=120<CR>':':set colorcolumn=0<CR>'
-
+"<Esc>
+"Insert empty line without leaving normal mode
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
 
 
 "                            =======================                              
@@ -163,10 +165,6 @@ autocmd filetype html nnoremap <buffer> <f5> :w <bar> :!firefox % <CR>
 "                               Plugin Keybindings
 "=================================================================================
 
-"CHADTree
-nnoremap <Leader>c <cmd>w <bar> :CHADopen<CR>
-autocmd filetype CHADTree nnoremap <buffer> <Leader>c :q <CR>
-
 "Nvim-R
 nmap <silent><Leader>b <Plug>RSendChunk<CR>
 vmap <silent><Leader>b <Plug>RSendChunk<CR>
@@ -185,3 +183,11 @@ nnoremap <silent> <Leader>f. :Files %:p:h<CR>
 nnoremap <silent> <Leader>fb :Buffers <CR>
 nnoremap <silent> <Leader>f/ :Files ~/<CR>
 nnoremap <silent> <Leader>f<Tab> :GFiles<CR>
+
+"Vimwiki
+"nmap <Leader>vh <Plug>Vimwiki2HTML
+"nmap <Leader>vhh <Plug>Vimwiki2HTMLBrowse
+"nmap <Leader>v<Leader>i <Plug>VimwikiDiaryGenerateLinks
+"nmap <Leader>vn <Plug>VimwikiGoto
+"nmap <Leader>vd <Plug>VimwikiDeleteFile
+"nmap <Leader>vr <Plug>VimwikiRenameFile
